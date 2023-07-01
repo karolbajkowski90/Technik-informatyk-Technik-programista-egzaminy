@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <div class="one">
+            <h2>Poznaj Ciągi Liczbowe</h2>
+        </div>
+        <div class="two">
+            <a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+        </div>
+        <div class="three">
+            <a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+        </div>
+        <div class="four">
+            <img src="obraz1.png" alt="Fibonacci">
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <ol>
+                <li>ciągi arytmetyczne</li>
+                <li>ciągi geometryczne</li>
+                <li>ciąg Fibonacciego</li>
+            </ol>
+        </div>
+        <div class="right">
+            <h2>Generowanie ciągu arytmetycznego</h2>
+            Pierwszy wyraz A1: <input type="number" min="0" id="a1"><br>
+            Różnica ciągu R: <input type="number" min="0" id="r"><br>
+            Liczba wyrazów w ciągu n: <input type="number" min="2" id="n"><br>
+            <button type="submit" id="ciag" onClick="ciagar()">Generuj ciąg</button>
+            <p id="wynik"></p>
+        </div>
+        <script>
+            function ciagar() {
+                let a1 = document.getElementById("a1").value;
+                let r = document.getElementById("r").value;
+                let n = document.getElementById("n").value;
+                    a1 = parseInt(a1);
+                    r = parseInt(r);
+                    n = parseInt(n);
+                let wynik = "Ciąg arytmetyczny zawiera wyrazy: ";
+                wynik += a1;
+                for(let i = 1; i < n; i++) {
+                    a1 = a1 + r;
+                    wynik += ", " + a1;
+                }
+                document.getElementById("wynik").innerHTML = wynik;
+            }
+        </script>
+    </main>
+    <footer>
+        <p>Autor: PESEL 9876543210</p>
+    </footer>
+</body>
+</html>

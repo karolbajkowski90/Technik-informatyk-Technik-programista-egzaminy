@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pogotowie komputerowe</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <section class="kontener">
+        <header>
+            <img src="BANER.png" alt="">
+        </header>
+        <menu>
+            <a href="index.html">O nas</a>
+            <a href="kontakt.html">Kontakt</a>
+        </menu>
+        <main>
+            <div class="one">
+
+            </div>
+            <div class="two">
+                <h3>Formularz kontaktowy</h3>
+                <table>
+                        <tr>
+                            <td>Imię:</td>
+                            <td><input type="text" name="imie" id="imie"></td>
+                        </tr>
+                        <tr>
+                            <td>Nazwisko:</td>
+                            <td><input type="text" name="nazwisko" id="nazwisko"></td>
+                        </tr>
+                        <tr>
+                            <td>E-mail:</td>
+                            <td><input type="email" name="mail" id="mail"></td>
+                        </tr>
+                        <tr>
+                            <td>Usługa:</td>
+                            <td><select id="usluga">
+                                    <option>naprawa komputera</option>
+                                    <option>odzyskiwanie danych</option>
+                                    <option>problemy z oprogramowaniem</option>
+                                    <option>konfiguracja sieci LAN</option>
+                                    <option>inne</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox" checked>Wyślij kopię wiadomości</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="reset" name="reset" class="reset">Resetuj</button>
+                                <button type="submit" name="submit"  class="submit" onclick="submitForm()">Prześlij</button>
+                            </td>
+                        </tr>
+                </table>
+                <p id="result"></p>
+            </div>
+            <div class="three">
+
+            </div>
+        </main>
+        <footer>
+            <p>Autor strony: PESEL 9876543210</p>
+        </footer>
+    </section>
+</body>
+<script>
+    function submitForm() {
+      let imie = document.getElementById("imie").value;
+      let nazwisko = document.getElementById("nazwisko").value;
+      let mail = document.getElementById("mail").value.toLowerCase();
+      let result = document.getElementById("result");
+      let usluga = document.getElementById("usluga").value;
+      result.innerHTML = imie + " " + nazwisko + "<br>" + mail + "<br>" + usluga;
+    }
+</script>
+</html>

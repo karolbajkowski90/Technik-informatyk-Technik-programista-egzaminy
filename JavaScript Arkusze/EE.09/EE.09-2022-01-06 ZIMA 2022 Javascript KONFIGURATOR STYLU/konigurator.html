@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Style w Javascript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <main>
+        <section class="left">
+            <h1>Konfigurator<br> stylu</h1>
+            <p>Podaj kolor tła</p>
+            <button id="indigo" onClick="indigo()">Indigo</button>
+            <button id="steelblue" onClick="steelblue()">SteelBlue</button>
+            <button id="olive" onClick="olive()">Olive</button>
+            <p>Podaj kolor czcionki</p><br>
+            <select id="kolorcz" onchange="funkcjacz()">
+                <option>White</option>
+                <option>Tan</option>
+                <option>Bisque</option>
+                <option>Plum</option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach, np. 200%</p><br>
+            <input type="text" id="rozmiar" value="100%" onchange="funkcjarozm()">
+
+            <p>Czy rysunek ma mieć ramkę?</p><br>
+            <input type="checkbox" id="ramka" checked onClick="funkcjaramka()">Rysuj ramkę
+
+            <p>Jaki jest typ punktora listy?</p>
+            <input type="radio" name="type" id="dysk" checked onClick="funkcjatyp()">dysk
+            <input type="radio" name="type" id="kwadrat" onClick="funkcjatyp()">kwadrat
+            <input type="radio" name="type" id="okrag" onClick="funkcjatyp()">okrąg
+
+        </section>
+        <section id="right">
+            <div class="img">
+                <img src="gibraltar.jpg" id="obraz" alt="półwysep gibraltar">
+            </div>
+            <div class="lista">
+                <ul id="punkty">
+                    <li>Element 1</li>
+                    <li>Element 1</li>
+                    <li>Element 1</li>
+                </ul>
+            </div>
+            <div class="paragraf">
+                <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ab enim perferendis molestiae provident rerum? Ratione quae, laborum reiciendis recusandae quos odit ullam possimus ducimus aliquam, architecto veritatis dolorum aut!</p>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        Autro: PESEL 123456789123
+    </footer>
+</body>
+<script>
+    function indigo() {
+        document.getElementById("right").style.backgroundColor = "indigo";
+    }
+    function steelblue() {
+        document.getElementById("right").style.backgroundColor = "steelblue";
+    }
+    function olive() {
+        document.getElementById("right").style.backgroundColor = "olive";
+    }
+    function funkcjacz() {
+        kolorcz = document.getElementById("kolorcz").value
+        document.getElementById("right").style.color = kolorcz
+    }
+    function funkcjarozm() {
+        rozmiarcz = document.getElementById("rozmiar").value;
+        document.getElementById("right").style.fontSize = rozmiarcz;
+    }
+    function funkcjaramka() {
+        ramka = document.getElementById("ramka").checked
+        if (ramka == true) 
+            document.getElementById("obraz").style.border = "1px solid white"
+            else
+                document.getElementById("obraz").style.border = "none"
+
+        }
+    function funkcjatyp() {
+        dysk = document.getElementById("dysk").checked
+        kwadrat = document.getElementById("kwadrat").checked
+        okrag = document.getElementById("okrag").checked
+        if (dysk == true)
+            document.getElementById("punkty").style.listStyleType = "disc"
+        if (kwadrat == true)
+            document.getElementById("punkty").style.listStyleType = "square"
+        if (okrag == true)
+            document.getElementById("punkty").style.listStyleType = "circle"
+    }
+</script>
+<!-- link do filmu https://www.youtube.com/watch?v=BZMnFCZihFI -->
+</html>
