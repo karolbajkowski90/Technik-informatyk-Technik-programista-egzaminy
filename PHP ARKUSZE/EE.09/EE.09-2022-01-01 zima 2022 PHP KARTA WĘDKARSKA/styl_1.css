@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+header {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+main {
+    background-color: lightblue;
+    padding: 100px;
+}
+.left {
+    background-color: dodgerblue;
+    color: white;
+    width: 20%;
+    height: 220px;
+}
+.middle,
+.right {
+    background-color: dodgerblue;
+    color: white;
+    width: 40%;
+    height: 220px;
+    text-align: center;
+}
+a {
+    border: 1px solid dimgray;
+    background-color: gold;
+    color: darkred;
+    padding: 10px;
+}
+footer {
+    display: flex;
+}
+p {
+    padding: 2% 0 3% 0;
+}
+ul {
+    padding: 5% 0 0 15%;
+}
+.types {
+    padding: 4% 0 0 0;
+}
+button {
+    padding: 2px 7px;
+    background: linear-gradient(white, rgb(202, 199, 199));
+    border: 1px solid black;
+    border-radius: 3px;
+}
+h2 {
+    padding: 2%;
+}

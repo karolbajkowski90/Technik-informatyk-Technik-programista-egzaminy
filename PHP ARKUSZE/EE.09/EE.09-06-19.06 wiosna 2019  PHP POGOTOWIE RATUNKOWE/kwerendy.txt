@@ -1,0 +1,4 @@
+1. INSERT INTO zgloszenia (id, ratownicy_id, dyspozytorzy_id, adres, pilne, czas_zgloszenia) VALUES ('', 1, 4, 'Warszawa, Staszica 34/5', 1, '15:14:00');
+2. SELECT adres, dyspozytorzy_id from zgloszenia where ratownicy_id=3;
+3. CREATE USER 'anna'@'localhost' IDENTIFIED BY "Anna4!";
+4. GRANT INSERT, UPDATE, SELECT ON ratownictwo.zgloszenia TO 'anna'@'localhost';

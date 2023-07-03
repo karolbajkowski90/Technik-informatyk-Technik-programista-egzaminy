@@ -1,0 +1,6 @@
+Baza i nadane w niej rekordy różnią się od tych z arkusza(nie było załączonej bazy sql, więc na szybko stworzyłem przykładową)
+
+1. INSERT INTO `rezerwacje`(`id_rezerwacji`, `nr_stolika`, `data_rez`, `liczba_osob`, `telefon`) VALUES ('NULL','1','2017-07-04','4','111222333');
+2. SELECT nazwa, cena FROM dania WHERE typ=1;   (dania mięsne)
+3. SELECT nazwa FROM dania WHERE typ=2 AND cena<15; (typ 2 i cena mniejsza od 15zł)
+4. UPDATE `pracownicy` SET `stanowisko`=3 WHERE stanowisko=4;
